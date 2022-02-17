@@ -1,18 +1,26 @@
+
+<div align="center">
+    <a href="https://probnum.readthedocs.io"><img align="center" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum-gsoc2022/main/probnum-logo.png" alt="probabilistic numerics" width="400" style="padding-right: 10px; padding left: 10px;" title="Probabilistic Numerics in Python"/>
+    </a>
+</div>
+
+---
+
 # ProbNum &#10005; GSoC 2022
 
 Materials for Google Summer of Code 2022 participants interested in developing for [ProbNum](http://probnum.org).
 
 
+- **Code Repository**: https://github.com/probabilistic-numerics/probnum
+- **Tutorials**: https://probnum.readthedocs.io/en/latest/tutorials.html
+- **Documentation**: https://probnum.readthedocs.io/en/latest/api.html
+- **Contribution Guides**: https://probnum.readthedocs.io/en/latest/development.html
 
 
-# ProbNum
+# Project(s)
 
-- **Code Repository**:
-- **Documentation**:
-- **Contribution Guides**:
-
-
-# Projects
+Primary mentor: 
+Secondary mentors: 
 
 ## Batched Random Variables and Sampling in Random Processes
 have batched RVs implemented, add them to the GP’s __call__ method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
