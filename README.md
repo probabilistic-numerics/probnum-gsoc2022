@@ -16,7 +16,7 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project: Differentiable Solvers for Ordinary Differential Equations
+# Project 1: Differentiable Solvers for Ordinary Differential Equations
 
 ## Description
 
@@ -45,9 +45,11 @@ Implement a boundary value problem solver based on [this paper](https://arxiv.or
 nicholas.kraemer(at)uni-tuebingen.de
 
 
-# Project: Batched Random Variables for a Differentiable Random Processes Implementation
+# Project 2: Batched Random Variables for a Differentiable Random Process Implementation
 
+Random variables and processes are the fundamental objects in ProbNum representing uncertainty over values and functions, respectively. Every probabilistic numerical method outputs either a random variable or process describing the quantity of interest, such as the solution to a differential equation. In practice, often one needs a batch of random variables which are assumed or known to be independent. This can speed up and simplify implementations considerably (e.g. when computing marginal distributions or evaluating random processes).
 
+The goal of this project is to extend the current implementation of `RandomVariable` and `RandomProcess` to allow for batched `RandomVariable`s. This should be done using ProbNum's automatic differentiation backend (with a particular focus on JAX) to allow parameters of distributions to be fitted when conditioning on data. An example of this is hyperparameter optimization in Gaussian processes.
 
 
 ### Requirements
