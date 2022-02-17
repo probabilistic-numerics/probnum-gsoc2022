@@ -32,3 +32,14 @@ Basically, implement https://arxiv.org/abs/2106.07761. This would make a counter
 
 ## Implementing perturbed-state solvers
 and include some fun goodies for the ODE world, like PI(D)-control, fancier event handling, etc..
+
+## Linear Algebra / Galerkin methods
+All of the below should be done in the autodiff backend:
+
+- implement commonly used preconditioners
+  - Jacobi
+  - incomplete Cholesky
+  - SPAI
+  - for GPs (Nyström, RFF, QFF, NNGP?)
+- implement sparse linear operators
+- benchmark the probabilistic linear solver and implement a lazy version
