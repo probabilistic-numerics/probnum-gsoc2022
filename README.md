@@ -1,20 +1,19 @@
 
 <div align="center">
-    <a href="https://probnum.readthedocs.io"><img align="center" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum-gsoc2022/main/probnum-logo.png" alt="probabilistic numerics" width="400" style="padding-right: 10px; padding left: 10px;" title="Probabilistic Numerics in Python"/>
+    <a href="https://probnum.readthedocs.io"><img align="center" src="https://raw.githubusercontent.com/probabilistic-numerics/probnum/main/docs/source/assets/img/logo/probnum_logo_dark_txtright.svg" alt="probabilistic numerics" width="600" style="padding-right: 10px; padding left: 10px;" title="Probabilistic Numerics in Python"/>
     </a>
 </div>
-
----
+<br>
 
 # ProbNum &#10005; GSoC 2022
 
 Materials for Google Summer of Code 2022 participants interested in developing for [ProbNum](http://probnum.org).
 
 
-- **Code Repository**: https://github.com/probabilistic-numerics/probnum
-- **Tutorials**: https://probnum.readthedocs.io/en/latest/tutorials.html
-- **Documentation**: https://probnum.readthedocs.io/en/latest/api.html
-- **Contribution Guides**: https://probnum.readthedocs.io/en/latest/development.html
+- [**Code Repository**](https://github.com/probabilistic-numerics/probnum)
+- [**Tutorials**](https://probnum.readthedocs.io/en/latest/tutorials.html)
+- [**Documentation**](https://probnum.readthedocs.io/en/latest/api.html)
+- [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
 # Project(s)
