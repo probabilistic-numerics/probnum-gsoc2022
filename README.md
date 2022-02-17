@@ -54,6 +54,7 @@ The goal of this project is to extend the current implementation of `RandomVaria
 
 ### Requirements
 - good Python coding skills
+- in-depth understanding of NumPy‘s broadcasting and vectorization mechanisms
 - familiarity with an automatic differentiation framework (ideally JAX)
 - basic interest or knowledge in probability theory
 
