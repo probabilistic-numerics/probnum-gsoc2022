@@ -16,10 +16,13 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project(s)
+# Project
 
 Primary mentor: 
 Secondary mentors: 
+
+
+# Ideas
 
 ## Batched Random Variables and Sampling in Random Processes
 have batched RVs implemented, add them to the GP’s __call__ method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
