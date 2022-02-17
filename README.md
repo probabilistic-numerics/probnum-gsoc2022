@@ -16,23 +16,30 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project: Example
+# Project: Differentiable Solvers for Ordinary Differential Equations
 
 ## Description
 
-### Goal 1
+Ordinary differential equations (ODEs) are an important model in the natural sciences to describe dynamical processes such as Newton's laws of motion. In practice ODEs are solved using numerical methods based on discretization of the problem. ProbNum offers [probabilistic solvers](https://probnum.readthedocs.io/en/latest/api/automod/probnum.diffeq.probsolve_ivp.html#probnum.diffeq.probsolve_ivp) for ODEs with a given initial value, which quantify the uncertainty incurred by discretization. See [ProbNum's tutorials](https://probnum.readthedocs.io/en/latest/tutorials.html#ordinary-differential-equation-solvers) on ODE solvers for an example.
 
-### Goal 2
+Multiple desirable functionalities such as improved uncertainty quantification, parameter inference and step size selection only become possible when derivatives of the functions defining the ODE are known. Automatic differentiation frameworks, such as JAX, enable a user to simply define a function in code and then compute gradients with respect to its parameters.
+
+The goal of this project is to implement the probabilistic ODE solver in ProbNum's automatic differentiation backend to enable the described functionality above without having to manually define derivatives.
 
 ### Stretch Goal
-
+Implement a boundary value problem solver based on [this paper](https://arxiv.org/abs/2106.07761) in analogy to [`scipy.solve_bvp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html).
 
 ### Requirements
+- good Python coding skills
+- familiarity with an automatic differentiation framework (ideally JAX)
+- basic interest or knowledge in numerical analysis
 
 ### Project Size
 175 / 350 hours
 
 ### Mentor(s)
+- Primary: Nicholas Krämer
+- Secondary: Jonathan Schmidt, Jonathan Wenger
 
 ### Contact
 
@@ -40,7 +47,7 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 # Ideas
 
 ## Batched Random Variables and Sampling in Random Processes
-have batched RVs implemented, add them to the GP’s __call__ method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
+have batched RVs implemented, add them to the GP’s `__call__` method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
 
 ## Differentiable, backend-independent ODE solvers. 
 Filters/smoothers as well, ideally. (self-explanatory, I guess.) The only issue I could see with this project is that if the backend is done soon, I might have a crack at much of that myself already. But it should be a reasonable project.
