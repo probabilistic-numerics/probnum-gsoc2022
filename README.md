@@ -1,3 +1,27 @@
 # ProbNum &#10005; GSoC 2022
 
 Materials for Google Summer of Code 2022 participants interested in developing for [ProbNum](http://probnum.org).
+
+
+
+
+# ProbNum
+
+- **Code Repository**:
+- **Documentation**:
+- **Contribution Guides**:
+
+
+# Projects
+
+## Batched Random Variables and Sampling in Random Processes
+have batched RVs implemented, add them to the GP’s __call__ method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
+
+## Differentiable, backend-independent ODE solvers. 
+Filters/smoothers as well, ideally. (self-explanatory, I guess.) The only issue I could see with this project is that if the backend is done soon, I might have a crack at much of that myself already. But it should be a reasonable project.
+
+## BVP solvers and state-space optimisers. 
+Basically, implement https://arxiv.org/abs/2106.07761. This would make a counterpart of https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html. The very basics should be pretty simple to build (all parts are there), but getting it right will take the student a bit, I guess. Perhaps easy to combine with https://github.com/probabilistic-numerics/probnum/issues/248.
+
+## Implementing perturbed-state solvers
+and include some fun goodies for the ODE world, like PI(D)-control, fancier event handling, etc..
