@@ -42,6 +42,28 @@ Implement a boundary value problem solver based on [this paper](https://arxiv.or
 - Secondary: Jonathan Schmidt, Jonathan Wenger
 
 ### Contact
+nicholas.kraemer(at)uni-tuebingen.de
+
+
+# Project: Batched Random Variables for a Differentiable Random Processes Implementation
+
+
+
+
+### Requirements
+- good Python coding skills
+- familiarity with an automatic differentiation framework (ideally JAX)
+- basic interest or knowledge in probability theory
+
+### Project Size
+175 / 350 hours
+
+### Mentor(s)
+- Primary: Marvin Pförtner
+- Secondary: Jonathan Wenger, Nicholas Krämer
+
+### Contact
+marvin.pfoertner(at)uni-tuebingen.de
 
 
 # Ideas
