@@ -16,10 +16,25 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project
+# Project: Example
 
-Primary mentor: 
-Secondary mentors: 
+## Description
+
+### Goal 1
+
+### Goal 2
+
+### Stretch Goal
+
+
+### Requirements
+
+### Project Size
+175 / 350 hours
+
+### Mentor(s)
+
+### Contact
 
 
 # Ideas
