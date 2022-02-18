@@ -16,19 +16,17 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project 1: Differentiable Solvers for Ordinary Differential Equations
+# Project 1: Differentiable Solvers for Differential Equations
 
 ## Description
 
 Ordinary differential equations (ODEs) are an important model in the natural sciences to describe dynamical processes such as Newton's laws of motion. In practice, ODEs are solved using numerical methods based on discretization of the problem. ProbNum offers [probabilistic solvers](https://probnum.readthedocs.io/en/latest/api/automod/probnum.diffeq.html#probnum.diffeq.probsolve_ivp) for ODEs, which quantify the uncertainty associated with the discretization error. See [ProbNum's tutorials](https://probnum.readthedocs.io/en/latest/tutorials.html#ordinary-differential-equation-solvers) on ODE solvers for an example.
 
 Multiple desirable functionalities, for example, model selection through ODE parameter inference, require derivatives of ODE solutions.
-Automatic differentiation frameworks, such as JAX, enable a user to straightforwardly compute gradients of ODE solutions with respect to ODE parameters.
-The goal of this project is to port the probabilistic ODE solver to ProbNum's automatic differentiation backend.
+Automatic differentiation frameworks, such as JAX, enable a user to straightforwardly compute gradients of ODE solutions with respect to ODE parameters. The goal of this project is to port the probabilistic ODE solver to ProbNum's automatic differentiation backend.
 
-### Stretch Goals
-Implement a boundary value problem solver based on [this paper](https://arxiv.org/abs/2106.07761), in analogy to [`scipy.solve_bvp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html),
-or improve the efficiency of probabilistic ODE solver implementations according to [this paper](https://arxiv.org/abs/2110.11812), based on the participants interest and the time remaining.
+### Stretch Goal(s)
+Many physical applications not only involve temporal dynamics but also spatial dynamics, for example heat flow. Such phenomena are typically modelled by partial differential equations (PDEs). One can solve such problems via discretization, resulting in (typically very large) linear systems. Computing solutions to such discretized PDEs with calibrated uncertainty requires differentiable linear solvers. The stretch goal of this project is the implementation of an efficient and scalable version of such a solver.
 
 ### Requirements
 - good Python coding skills
@@ -40,7 +38,7 @@ or improve the efficiency of probabilistic ODE solver implementations according 
 
 ### Mentor(s)
 - Primary: [Nicholas Krämer](https://github.com/pnkraemer/)
-- Secondary: [Jonathan Schmidt](https://github.com/schmidtjonathan/), [Jonathan Wenger](https://github.com/JonathanWenger/)
+- Secondary: [Jonathan Wenger](https://github.com/JonathanWenger/), [Jonathan Schmidt](https://github.com/schmidtjonathan/)
 
 ### Contact
 nicholas.kraemer(at)uni-tuebingen.de
@@ -52,8 +50,8 @@ Random variables and processes are the fundamental objects in ProbNum representi
 
 The goal of this project is to extend the current implementation of `RandomVariable` and `RandomProcess` to allow for batched `RandomVariable`s. This should be done using ProbNum's automatic differentiation backend (with a particular focus on JAX) to allow parameters of distributions to be fitted when conditioning on data. An example of this is hyperparameter optimization in Gaussian processes.
 
-### Stretch Goal
-Implement path-wise sampling via https://arxiv.org/pdf/2002.09309.pdf.
+### Stretch Goal(s)
+Implement path-wise sampling for Gaussian processes via https://arxiv.org/pdf/2002.09309.pdf.
 
 ### Requirements
 - good Python coding skills
