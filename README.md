@@ -16,7 +16,7 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 - [**Contribution Guides**](https://probnum.readthedocs.io/en/latest/development.html)
 
 
-# Project 1: Differentiable Solvers for Differential Equations
+# Project 1: Differentiable Probabilistic Solvers for Differential Equations
 
 ## Description
 
