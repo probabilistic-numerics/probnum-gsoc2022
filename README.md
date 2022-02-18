@@ -20,19 +20,21 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 
 ## Description
 
-Ordinary differential equations (ODEs) are an important model in the natural sciences to describe dynamical processes such as Newton's laws of motion. In practice ODEs are solved using numerical methods based on discretization of the problem. ProbNum offers [probabilistic solvers](https://probnum.readthedocs.io/en/latest/api/automod/probnum.diffeq.probsolve_ivp.html#probnum.diffeq.probsolve_ivp) for ODEs with a given initial value, which quantify the uncertainty incurred by discretization. See [ProbNum's tutorials](https://probnum.readthedocs.io/en/latest/tutorials.html#ordinary-differential-equation-solvers) on ODE solvers for an example.
+Ordinary differential equations (ODEs) are an important model in the natural sciences to describe dynamical processes such as Newton's laws of motion. In practice, ODEs are solved using numerical methods based on discretization of the problem. ProbNum offers [probabilistic solvers](https://probnum.readthedocs.io/en/latest/api/automod/probnum.diffeq.html#probnum.diffeq.probsolve_ivp) for ODEs, which quantify the uncertainty associated with the discretization error. See [ProbNum's tutorials](https://probnum.readthedocs.io/en/latest/tutorials.html#ordinary-differential-equation-solvers) on ODE solvers for an example.
 
-Multiple desirable functionalities such as improved uncertainty quantification, parameter inference and step size selection only become possible when derivatives of the functions defining the ODE are known. Automatic differentiation frameworks, such as JAX, enable a user to simply define a function in code and then compute gradients with respect to its parameters.
+Multiple desirable functionalities, for example, model selection through ODE parameter inference, require derivatives of ODE solutions.
+Automatic differentiation frameworks, such as JAX, enable a user to straightforwardly compute gradients of ODE solutions with respect to ODE parameters, accelerate solver implementations through just-in-time compilation, and would simplify the combination of ProbNum's ODE solvers with external machine learning code.
 
-The goal of this project is to implement the probabilistic ODE solver in ProbNum's automatic differentiation backend to enable the described functionality above without having to manually define derivatives.
+The goal of this project is to port the probabilistic ODE solver to ProbNum's automatic differentiation backend.
 
-### Stretch Goal
-Implement a boundary value problem solver based on [this paper](https://arxiv.org/abs/2106.07761) in analogy to [`scipy.solve_bvp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html).
+### Stretch Goals
+Implement a boundary value problem solver based on [this paper](https://arxiv.org/abs/2106.07761), in analogy to [`scipy.solve_bvp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html),
+or improve the efficiency of probabilistic ODE solver implementations according to [this paper](https://arxiv.org/abs/2110.11812), based on the participants interest.
 
 ### Requirements
 - good Python coding skills
 - familiarity with an automatic differentiation framework (ideally JAX)
-- basic interest or knowledge in numerical analysis
+- basic interest in or knowledge of numerical analysis and/or Kalman filtering
 
 ### Project Size
 175 / 350 hours
