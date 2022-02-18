@@ -23,13 +23,12 @@ Materials for Google Summer of Code 2022 participants interested in developing f
 Ordinary differential equations (ODEs) are an important model in the natural sciences to describe dynamical processes such as Newton's laws of motion. In practice, ODEs are solved using numerical methods based on discretization of the problem. ProbNum offers [probabilistic solvers](https://probnum.readthedocs.io/en/latest/api/automod/probnum.diffeq.html#probnum.diffeq.probsolve_ivp) for ODEs, which quantify the uncertainty associated with the discretization error. See [ProbNum's tutorials](https://probnum.readthedocs.io/en/latest/tutorials.html#ordinary-differential-equation-solvers) on ODE solvers for an example.
 
 Multiple desirable functionalities, for example, model selection through ODE parameter inference, require derivatives of ODE solutions.
-Automatic differentiation frameworks, such as JAX, enable a user to straightforwardly compute gradients of ODE solutions with respect to ODE parameters, accelerate solver implementations through just-in-time compilation, and would simplify the combination of ProbNum's ODE solvers with external machine learning code.
-
+Automatic differentiation frameworks, such as JAX, enable a user to straightforwardly compute gradients of ODE solutions with respect to ODE parameters.
 The goal of this project is to port the probabilistic ODE solver to ProbNum's automatic differentiation backend.
 
 ### Stretch Goals
 Implement a boundary value problem solver based on [this paper](https://arxiv.org/abs/2106.07761), in analogy to [`scipy.solve_bvp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html),
-or improve the efficiency of probabilistic ODE solver implementations according to [this paper](https://arxiv.org/abs/2110.11812), based on the participants interest.
+or improve the efficiency of probabilistic ODE solver implementations according to [this paper](https://arxiv.org/abs/2110.11812), based on the participants interest and the time remaining.
 
 ### Requirements
 - good Python coding skills
