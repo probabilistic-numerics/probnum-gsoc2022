@@ -38,8 +38,8 @@ Implement a boundary value problem solver based on [this paper](https://arxiv.or
 175 / 350 hours
 
 ### Mentor(s)
-- Primary: Nicholas Krämer
-- Secondary: Jonathan Schmidt, Jonathan Wenger
+- Primary: [Nicholas Krämer](https://github.com/pnkraemer/)
+- Secondary: [Jonathan Schmidt](https://github.com/schmidtjonathan/), [Jonathan Wenger](https://github.com/JonathanWenger/)
 
 ### Contact
 nicholas.kraemer(at)uni-tuebingen.de
@@ -51,6 +51,8 @@ Random variables and processes are the fundamental objects in ProbNum representi
 
 The goal of this project is to extend the current implementation of `RandomVariable` and `RandomProcess` to allow for batched `RandomVariable`s. This should be done using ProbNum's automatic differentiation backend (with a particular focus on JAX) to allow parameters of distributions to be fitted when conditioning on data. An example of this is hyperparameter optimization in Gaussian processes.
 
+### Stretch Goal
+Implement path-wise sampling via https://arxiv.org/pdf/2002.09309.pdf.
 
 ### Requirements
 - good Python coding skills
@@ -62,34 +64,8 @@ The goal of this project is to extend the current implementation of `RandomVaria
 175 / 350 hours
 
 ### Mentor(s)
-- Primary: Marvin Pförtner
-- Secondary: Jonathan Wenger, Nicholas Krämer
+- Primary: [Marvin Pförtner](https://github.com/marvinpfoertner)
+- Secondary: [Jonathan Wenger](https://github.com/JonathanWenger/), [Nicholas Krämer](https://github.com/pnkraemer/)
 
 ### Contact
 marvin.pfoertner(at)uni-tuebingen.de
-
-
-# Ideas
-
-## Batched Random Variables and Sampling in Random Processes
-have batched RVs implemented, add them to the GP’s `__call__` method, and, if there’s time, have the intern implement path sampling (maybe via https://arxiv.org/pdf/2002.09309.pdf)
-
-## Differentiable, backend-independent ODE solvers. 
-Filters/smoothers as well, ideally. (self-explanatory, I guess.) The only issue I could see with this project is that if the backend is done soon, I might have a crack at much of that myself already. But it should be a reasonable project.
-
-## BVP solvers and state-space optimisers. 
-Basically, implement https://arxiv.org/abs/2106.07761. This would make a counterpart of https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_bvp.html. The very basics should be pretty simple to build (all parts are there), but getting it right will take the student a bit, I guess. Perhaps easy to combine with https://github.com/probabilistic-numerics/probnum/issues/248.
-
-## Implementing perturbed-state solvers
-and include some fun goodies for the ODE world, like PI(D)-control, fancier event handling, etc..
-
-## Linear Algebra / Galerkin methods
-All of the below should be done in the autodiff backend:
-
-- implement commonly used preconditioners
-  - Jacobi
-  - incomplete Cholesky
-  - SPAI
-  - for GPs (Nyström, RFF, QFF, NNGP?)
-- implement sparse linear operators
-- benchmark the probabilistic linear solver and implement a lazy version
